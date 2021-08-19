@@ -6,6 +6,8 @@
 <body>
    <h1>Device Listing and Status</h1>
 
+   <!-- Set up a for loop to cycle through each pin, print its name and its state,  
+    then give the option to change its state, based on its current state. --> 
    {% for pin in pins %}
    <p>The {{ pins[pin].name }}
    {% if pins[pin].state == true %}
@@ -16,6 +18,7 @@
    </p>
    {% endfor %}
 
+   <!-- Print a message passed from Python script if there's a message sent (that is, a change happened). -->
    {% if message %}
    <h2>{{ message }}</h2>
    {% endif %}
