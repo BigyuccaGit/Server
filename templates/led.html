@@ -6,22 +6,24 @@
    
    <body>
 		<h1>Actuators</h1>
-		<h2> Status </h2>
-		<h3> LEFT LED ==>  {{ leftLed  }}</h3>
-		<h3> RIGHT LED ==>  {{ rightLed  }}</h3>
-
-		<br>
-		<h2> Commands </h2>
-		<h3> 
-			LEFT LED Ctrl ==> 
-			<a href="/leftLed/on"  class="button">TURN ON</a>  
-			<a href="/leftLed/off" class="button">TURN OFF</a>
+		<h2> Status and Control </h2>
+		
+		<h3> LEFT LED ==>  {{ leftLed  }} ==> 
+		{% if leftLed == 1 %}
+		<a href="/leftLed/off"  class="button">TURN OFF</a>
+		{% else %}
+		<a href="/leftLed/on" class="button">TURN ON</a>
+		{% endif %}
 		</h3>
-		<h3> 
-			RIGHT LED Ctrl ==> 
-			<a href="/rightLed/on"  class="button">TURN ON</a>  
-			<a href="/rightLed/off" class="button">TURN OFF</a>
+		
+		<h3> RIGHT LED ==>  {{ rightLed  }} ==> 
+		{% if rightLed == 1 %}
+		<a href="/rightLed/off"  class="button">TURN OFF</a>
+		{% else %}
+		<a href="/rightLed/on" class="button">TURN ON</a>
+		{% endif %}
 		</h3>
+		
 
 		
    </body>

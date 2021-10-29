@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+   <head>
+      <title>GpioZero</title>
+      <link rel="stylesheet" href='../static/style.css'/>
+   </head>
+   
+   <body>
+		<h1>Actuators</h1>
+		<h2> Status </h2>
+		<h3> LEFT LED ==>  {{ leftLed  }}</h3>
+		<h3> RIGHT LED ==>  {{ rightLed  }}</h3>
+
+		<br>
+		<h2> Commands </h2>
+		<h3> 
+			LEFT LED Ctrl ==> 
+			<a href="/leftLed/on" class="button">TURN ON</a>  
+			<a href="/leftLed/off"class="button">TURN OFF</a>
+		</h3>
+		<h3> 
+			RIGHT LED Ctrl ==> 
+			<a href="/rightLed/on" class="button">TURN ON</a>  
+			<a href="/rightLed/off"class="button">TURN OFF</a>
+		</h3>
+
+		
+   </body>
+</html>
